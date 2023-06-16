@@ -22,47 +22,60 @@
             <Button Grid.Column="1" Content="MAKE RESERVATION"/>
         </Grid>
 
-        <ListView Grid.Row="1" Margin="0,25,0,0">
-            <ListViewItem/>
-            <ListViewItem/>
-            <ListViewItem/>
-            <ListView.ItemContainerStyle>
-                <Style TargetType="ListViewItem">
-                    <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
-                </Style>
-            </ListView.ItemContainerStyle>
+        <ListView Grid.Row="1" Margin="0,25,0,0" HorizontalContentAlignment="Left">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Header="NAME">
+                    <GridView.ColumnHeaderContainerStyle>
+                        <Style TargetType="{x:Type GridViewColumnHeader}">
+                            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                        </Style>
+                    </GridView.ColumnHeaderContainerStyle>
+                    <GridViewColumn Width="auto">
+                        <GridViewColumn.Header>
+                            <TextBlock Text="RESERVER NAME" HorizontalAlignment="Left" Padding="5,0,5,0"/>
+                        </GridViewColumn.Header>
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="DAVID" HorizontalAlignment="Center" Padding="10,0"/>
+                                <TextBlock Text="DAVID" HorizontalAlignment="Left"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn Header="ID">
+                    <GridViewColumn Width="auto">
+                        <GridViewColumn.Header>
+                            <TextBlock Text="RESERVABLE NAME" HorizontalAlignment="Left" Padding="5,0,5,0"/>
+                        </GridViewColumn.Header>
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="8391" HorizontalAlignment="Center" Padding="10,0"/>
+                                <TextBlock Text="BALL" HorizontalAlignment="Left"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn Header="START DATE">
+                    <GridViewColumn Width="auto">
+                        <GridViewColumn.Header>
+                            <TextBlock Text="START DATE" HorizontalAlignment="Left" Padding="5,0,5,0"/>
+                        </GridViewColumn.Header>
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="23/09/15" HorizontalAlignment="Center" Padding="10,0"/>
+                                <TextBlock Text="23/09/15" HorizontalAlignment="Left"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
-                    <GridViewColumn Header="END DATE">
+                    <GridViewColumn Width="auto">
+                        <GridViewColumn.Header>
+                            <TextBlock Text="END DATE" HorizontalAlignment="Left" Padding="5,0,5,0"/>
+                        </GridViewColumn.Header>
                         <GridViewColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="23/09/16" HorizontalAlignment="Center" Padding="10,0"/>
+                                <TextBlock Text="23/09/16" HorizontalAlignment="Left"/>
                             </DataTemplate>
                         </GridViewColumn.CellTemplate>
                     </GridViewColumn>
                 </GridView>
             </ListView.View>
+            
+            <ListViewItem/>
+            <ListViewItem/>
+            <ListViewItem/>
         </ListView>
     </Grid>
 </UserControl>
